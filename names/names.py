@@ -19,9 +19,12 @@ f.close()
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
 
-set_names_1 = set(names_1)
+# used set intersections to bring down the runtime
+# calling set methods
+set_names_1 = set(names_1) 
 set_names_2 = set(names_2)
-duplicates = (set_names_1.intersection(set_names_2))
+duplicates = (set_names_1.intersection(set_names_2)) # returns a set that contains similarity between two or more sets
+
 
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
